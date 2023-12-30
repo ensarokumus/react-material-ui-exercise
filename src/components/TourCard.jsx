@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from "prop-types";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import Typography from "@mui/material/Typography";
@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import { AccessTime } from "@mui/icons-material";
 import Rating from "@mui/material/Rating";
 import { createTheme, ThemeProvider } from "@mui/material";
-
 
 const theme = createTheme({
   components: {
@@ -32,6 +31,17 @@ const theme = createTheme({
     },
   },
 });
+
+TourCard.propTypes = {
+  tour: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    duration: PropTypes.number,
+    rating: PropTypes.number,
+    numberOfReviews: PropTypes.number,
+    price: PropTypes.number,
+  }).isRequired,
+};
 
 export default function TourCard({ tour }) {
   return (
