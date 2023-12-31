@@ -4,10 +4,10 @@ import {
   Box,
   Paper,
   BottomNavigation,
-  Button,
 } from "@mui/material";
 import ImageCollage from "../components/ImageCollage";
 import TourAccordion from "../components/TourAccordion";
+import BasicModal from "../components/Modal";
 
 export default function Tour() {
   return (
@@ -48,7 +48,7 @@ export default function Tour() {
       >
         <BottomNavigation sx={{display: "flex", alignItems: "center"}}>
           <Box>
-            <Button variant="contained">Book Now</Button>
+            <BasicModal />
           </Box>
         </BottomNavigation>
       </Paper>
